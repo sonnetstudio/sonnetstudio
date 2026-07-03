@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>소네트 스튜디오 | 킨텍스 앞 코스프레 렌탈 스튜디오</title>
+<meta content="킨텍스 도보 5분. 숲속 공방 컨셉존, 미니 소다존, 화이트 호리존, 분장실과 탈의공간을 이용할 수 있는 코스프레 렌탈 스튜디오입니다." name="description"/>
+<style>
+    :root {
+      --bg:#f5efe4; --paper:#fffaf1; --deep:#2f3a2d; --deep2:#20271f;
+      --olive:#6f7755; --gold:#b28b4b; --muted:#766e62; --line:#dfd3bd;
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      margin:0; font-family:"Pretendard","Noto Sans KR",system-ui,-apple-system,sans-serif;
+      background:var(--bg); color:var(--deep); line-height:1.68; word-break:keep-all;
+    }
+    a { color:inherit; }
+    .sparkles { position:fixed; inset:0; pointer-events:none; overflow:hidden; z-index:1; }
+    .sparkles span {
+      position:absolute; width:4px; height:4px; border-radius:999px;
+      background:rgba(255,238,188,.62); box-shadow:0 0 18px rgba(255,222,148,.7);
+      animation:float 13s linear infinite;
+    }
+    .sparkles span:nth-child(1) { left:8%; top:80%; animation-delay:0s; }
+    .sparkles span:nth-child(2) { left:18%; top:68%; animation-delay:2s; }
+    .sparkles span:nth-child(3) { left:42%; top:82%; animation-delay:4s; }
+    .sparkles span:nth-child(4) { left:68%; top:72%; animation-delay:1s; }
+    .sparkles span:nth-child(5) { left:84%; top:88%; animation-delay:3s; }
+    .sparkles span:nth-child(6) { left:55%; top:65%; animation-delay:5s; }
+    @keyframes float {
+      0% { transform:translateY(0) scale(.8); opacity:0; }
+      15% { opacity:.7; } 70% { opacity:.55; }
+      100% { transform:translateY(-90vh) scale(1.15); opacity:0; }
+    }
+    header {
+      position:relative; min-height:96vh; padding:28px 22px 72px; color:#fffaf1;
+      display:flex; flex-direction:column; justify-content:space-between; overflow:hidden; isolation:isolate;
+    }
+    header:before {
+      content:""; position:absolute; inset:0;
+      background:linear-gradient(90deg, rgba(21,25,20,.78) 0%, rgba(47,58,45,.38) 48%, rgba(21,25,20,.34) 100%),
+                 url("images/photo_01.jpg") center/cover no-repeat;
+      transform:scale(1.02); animation:slowzoom 18s ease-in-out infinite alternate; z-index:-2;
+    }
+    header:after {
+      content:""; position:absolute; inset:0;
+      background:radial-gradient(circle at 28% 28%, rgba(234,216,181,.22), transparent 26%);
+      z-index:-1;
+    }
+    @keyframes slowzoom { from { transform:scale(1.02); } to { transform:scale(1.07); } }
+    nav, .hero, section, footer { position:relative; z-index:2; }
+    nav {
+      max-width:1120px; margin:0 auto; width:100%; display:flex; justify-content:space-between;
+      align-items:center; font-size:14px; letter-spacing:.08em;
+    }
+    .logo { font-family:Georgia,"Noto Serif KR",serif; font-size:22px; letter-spacing:.12em; }
+    .navlinks { display:flex; gap:16px; opacity:.94; }
+    .navlinks a { text-decoration:none; }
+    .hero { max-width:1120px; width:100%; margin:90px auto 0; }
+    .eyebrow { color:#e6d2a4; letter-spacing:.2em; font-size:13px; margin-bottom:18px; font-weight:800; }
+    h1 {
+      font-family:Georgia,"Noto Serif KR",serif; font-size:clamp(42px,8vw,92px);
+      line-height:1.05; margin:0 0 22px; font-weight:500; text-shadow:0 14px 35px rgba(0,0,0,.26);
+    }
+    .hero p { max-width:640px; font-size:18px; color:#f8ead3; margin:0 0 32px; text-shadow:0 8px 24px rgba(0,0,0,.28); }
+    .buttons { display:flex; gap:12px; flex-wrap:wrap; }
+    .btn {
+      display:inline-block; padding:13px 21px; border-radius:999px; text-decoration:none;
+      font-weight:900; font-size:15px; transition:.18s ease; border:none;
+    }
+    .btn:hover { transform:translateY(-2px); }
+    .primary { background:#fffaf1; color:var(--deep); box-shadow:0 12px 30px rgba(0,0,0,.12); }
+    .gold { background:var(--gold); color:#fffaf1; box-shadow:0 12px 30px rgba(93,65,26,.18); }
+    .ghost { border:1px solid rgba(255,255,255,.55); color:#fffaf1; }
+
+    section { padding:88px 22px; }
+    .wrap { max-width:1120px; margin:0 auto; }
+    .section-title {
+      font-family:Georgia,"Noto Serif KR",serif; font-size:38px; line-height:1.2;
+      margin:0 0 16px; font-weight:500;
+    }
+    .lead { font-size:18px; color:var(--muted); max-width:780px; margin:0; }
+    .feature { display:grid; grid-template-columns:1.05fr .95fr; gap:30px; align-items:center; }
+    .image-card {
+      min-height:420px; border-radius:32px; overflow:hidden; box-shadow:0 18px 50px rgba(47,58,45,.12);
+      border:1px solid rgba(255,250,241,.7); background:#211f1a;
+    }
+    .image-card img, .gallery img { width:100%; height:100%; object-fit:cover; display:block; transition:.4s ease; }
+    .intro-photo img { object-fit:contain; object-position:center; background:#211f1a; }
+    .image-card:hover img, .gallery figure:hover img { transform:scale(1.04); }
+    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:36px; }
+    .two { display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-top:34px; }
+    .card {
+      background:rgba(255,250,241,.92); border:1px solid var(--line); border-radius:28px; padding:26px;
+      box-shadow:0 16px 40px rgba(47,58,45,.07); backdrop-filter: blur(5px);
+    }
+    .card h3 { margin:0 0 10px; font-size:21px; }
+    .card p { margin:0; color:var(--muted); }
+    .thumb { height:260px; border-radius:24px; overflow:hidden; margin-bottom:18px; background:#ddd; }
+    .thumb img { width:100%; height:100%; object-fit:cover; display:block; transition:.35s ease; }
+    .card:hover .thumb img { transform:scale(1.04); }
+
+    .gallery { display:grid; grid-template-columns:repeat(4, 1fr); grid-auto-rows:210px; gap:14px; margin-top:36px; }
+    .gallery figure { margin:0; border-radius:24px; overflow:hidden; position:relative; background:#ddd; box-shadow:0 12px 32px rgba(47,58,45,.08); }
+    .gallery .wide { grid-column:span 2; }
+    .gallery .tall { grid-row:span 2; }
+    .gallery figcaption {
+      position:absolute; left:0; right:0; bottom:0; padding:34px 16px 14px;
+      color:#fffaf1; font-weight:900; background:linear-gradient(transparent, rgba(0,0,0,.55)); font-size:14px;
+    }
+
+    .price-card strong { display:block; font-size:40px; line-height:1.15; font-family:Georgia,"Noto Serif KR",serif; color:var(--gold); margin:6px 0 8px; }
+    .badge { display:inline-block; background:#efe2c6; color:#685638; border-radius:999px; padding:6px 11px; font-size:13px; font-weight:900; margin-bottom:12px; }
+    .notice-box { margin-top:28px; border-left:5px solid var(--gold); background:var(--paper); padding:22px 24px; border-radius:20px; color:var(--muted); box-shadow:0 12px 28px rgba(47,58,45,.05); }
+    .rules { margin:26px 0 0; padding-left:20px; color:var(--muted); }
+    .rules li { margin:9px 0; }
+
+    .calendar-section { background:#ede5d5; }
+    .calendar-box { margin-top:32px; border-radius:30px; overflow:hidden; background:var(--paper); padding:16px; box-shadow:0 18px 48px rgba(47,58,45,.10); border:1px solid var(--line); }
+    .calendar-box iframe { width:100%; height:620px; border-radius:20px; background:#fff; display:block; }
+
+    .facility-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:32px; }
+    .facility-item { background:var(--paper); border:1px solid var(--line); border-radius:20px; padding:18px; font-weight:900; box-shadow:0 10px 28px rgba(47,58,45,.05); }
+    .equipment-list { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:28px; }
+    .equipment-list ul { margin:12px 0 0; padding-left:20px; color:var(--muted); }
+
+    .location-grid { display:grid; grid-template-columns:.95fr 1.05fr; gap:24px; align-items:stretch; margin-top:32px; }
+    .walk-list { display:grid; gap:12px; margin-top:20px; }
+    .walk-item { display:flex; justify-content:space-between; gap:16px; background:var(--paper); border:1px solid var(--line); border-radius:18px; padding:15px 18px; font-weight:900; }
+    .walk-item span:last-child { color:var(--gold); }
+    .map-card {
+      background:var(--paper); border:1px solid var(--line); border-radius:30px; padding:24px;
+      box-shadow:0 18px 48px rgba(47,58,45,.08); min-height:360px;
+    }
+.map-buttons { display:flex; gap:10px; flex-wrap:wrap; margin-top:16px; }
+    .map-buttons a { background:#efe2c6; color:#604f34; text-decoration:none; padding:10px 14px; border-radius:999px; font-weight:900; font-size:14px; }
+    .real-map-card iframe { display:block; margin-top:14px; box-shadow:0 10px 28px rgba(47,58,45,.08); }
+
+    .faq { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:32px; }
+    .faq-item { background:var(--paper); border:1px solid var(--line); border-radius:24px; padding:24px; box-shadow:0 12px 32px rgba(47,58,45,.05); }
+    .faq-item h3 { margin:0 0 10px; font-size:20px; }
+    .faq-item p { margin:0; color:var(--muted); }
+
+    .reservation {
+      background:radial-gradient(circle at 20% 20%, rgba(234,216,181,.16), transparent 30%),
+                 linear-gradient(135deg, #2f3a2d, #20271f);
+      color:#fffaf1;
+    }
+    .reservation .section-title { color:#fffaf1; }
+    .reservation p, .reservation .lead { color:#e8dcc8; }
+    .reservation-box { display:grid; grid-template-columns:1.05fr .95fr; gap:24px; align-items:center; margin-top:32px; }
+    .qr-card { background:#fffaf1; color:var(--deep); border-radius:30px; padding:24px; text-align:center; box-shadow:0 18px 48px rgba(0,0,0,.20); border:1px solid rgba(255,255,255,.5); }
+    .qr-card img { width:min(260px, 100%); border-radius:22px; display:block; margin:0 auto 14px; }
+    .qr-card strong { display:block; font-size:18px; }
+    .channel-id { margin:18px 0 22px; display:inline-block; background:rgba(255,250,241,.10); border:1px solid rgba(255,250,241,.28); border-radius:999px; padding:10px 15px; color:#fffaf1; font-weight:900; }
+
+    .info-table { width:100%; border-collapse:collapse; margin-top:28px; overflow:hidden; border-radius:20px; background:var(--paper); }
+    .info-table th,.info-table td { border-bottom:1px solid var(--line); padding:16px; text-align:left; vertical-align:top; }
+    .info-table th { width:150px; color:var(--gold); font-weight:900; }
+    footer { padding:34px 22px; background:var(--deep2); color:#d9cdb9; font-size:14px; }
+    footer .tagline { margin-top:10px; color:#efe2c6; font-weight:900; }
+
+    @media(max-width:950px) {
+      .grid,.two,.feature,.reservation-box,.location-grid,.equipment-list,.faq { grid-template-columns:1fr; }
+      .facility-grid { grid-template-columns:1fr 1fr; }
+      .gallery { grid-template-columns:1fr 1fr; grid-auto-rows:190px; }
+      .gallery .wide { grid-column:span 2; }
+      .navlinks { display:none; }
+      header { min-height:82vh; }
+      section { padding:64px 18px; }
+      .calendar-box iframe { height:520px; }
+    }
+    @media(max-width:520px) {
+      .gallery { grid-template-columns:1fr; grid-auto-rows:230px; }
+      .gallery .wide, .gallery .tall { grid-column:span 1; grid-row:span 1; }
+      .image-card { min-height:320px; }
+      .calendar-box iframe { height:470px; }
+      .facility-grid { grid-template-columns:1fr; }
+      .walk-item { flex-direction:column; gap:2px; }
+      .info-table th,.info-table td { display:block; width:100%; }
+      .info-table th { padding-bottom:4px; }
+      .info-table td { padding-top:4px; }
+    }
+  
+    .no-crop-photo {
+      height: auto !important;
+      min-height: 0 !important;
+      padding: 0 !important;
+      background: #211f1a !important;
+      display: block !important;
+    }
+    .no-crop-photo img {
+      width: 100% !important;
+      height: auto !important;
+      max-height: none !important;
+      object-fit: initial !important;
+      object-position: initial !important;
+      display: block !important;
+      transform: none !important;
+      transition: none !important;
+    }
+    .no-crop-photo:hover img {
+      transform: none !important;
+    }
+
+  </style>
+<meta content="소네트 스튜디오 | 킨텍스 앞 코스프레 렌탈 스튜디오" property="og:title"/>
+<meta content="나뭇잎 사이에서 이야기를 빚다. 행사 전후, 가장 가까운 판타지 컨셉 스튜디오." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="images/photo_01.jpg" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+</head>
+<body>
+<div aria-hidden="true" class="sparkles"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<header>
+<nav>
+<div class="logo">SONNET STUDIO</div>
+<div class="navlinks">
+<a href="#concept">CONCEPT</a><a href="#gallery">GALLERY</a><a href="#price">PRICE</a>
+<a href="#schedule">SCHEDULE</a><a href="#location">LOCATION</a><a href="#reservation">RESERVATION</a>
+</div>
+</nav>
+<div class="hero">
+<div class="eyebrow">FOREST ATELIER COSPLAY STUDIO</div>
+<h1>나뭇잎 사이에서<br/>이야기를 빚다</h1>
+<p>행사 전후, 가장 가까운 판타지 컨셉 스튜디오. 킨텍스 도보 5분 거리에 있는 작은 숲속 공방입니다.</p>
+<div class="buttons">
+<a class="btn primary" href="#schedule">예약 현황 확인하기</a>
+<a class="btn ghost" href="#reservation">카카오톡 예약</a>
+<a class="btn ghost" href="#location">오시는 길</a>
+</div>
+</div>
+</header>
+<section>
+<div class="wrap feature">
+<div>
+<h2 class="section-title">잘 관리된 오래된 공방처럼</h2>
+<p class="lead">소네트 스튜디오는 낡은 폐허가 아니라, 마법사가 잠시 자리를 비운 듯한 따뜻한 숲속 공방을 지향합니다. 숲속 공방 컨셉존, 미니 소다존, 화이트 호리존, 분장실과 탈의공간까지 하나의 예약으로 이용하실 수 있습니다.</p>
+</div>
+<div class="image-card intro-photo no-crop-photo">
+<img alt="소네트 스튜디오 공방 디테일" src="images/photo_02.jpg"/>
+</div>
+</div>
+</section>
+<section id="concept" style="background:#ede5d5">
+<div class="wrap">
+<h2 class="section-title">Concept Rooms</h2>
+<p class="lead">다른 무드의 촬영을 한 공간에서 이어갈 수 있습니다.</p>
+<div class="grid">
+<div class="card"><div class="thumb"><img alt="숲속 공방 컨셉존" src="images/photo_01.jpg"/></div><h3>Forest Atelier</h3><p>원형 창, 책장, 나무 오브제, 이끼와 덩굴로 구성된 메인 컨셉존.</p></div>
+<div class="card"><div class="thumb"><img alt="미니 소다존 전체컷" src="images/photo_03.jpg"/></div><h3>Mini Soda Zone</h3><p>소다스튜디오와 협업하여 제작된 미니 소다존. 꽃과 커튼, 은은한 핑크톤으로 구성된 감성 컨셉 공간.</p></div>
+<div class="card"><div class="thumb"><img alt="화이트 호리존" src="images/photo_04.jpg"/></div><h3>White Horizon</h3><p>전신컷, 프로필, 굿즈용 사진 촬영에 적합한 깔끔한 호리존.</p></div>
+</div>
+</div>
+</section>
+<section id="gallery">
+<div class="wrap">
+<h2 class="section-title">Gallery</h2>
+<p class="lead">공간의 전체 무드와 디테일 컷을 함께 확인해 주세요.</p>
+<div class="gallery">
+<figure class="wide"><img alt="숲속 공방 전체" src="images/photo_01.jpg"/><figcaption>Forest Atelier</figcaption></figure>
+<figure><img alt="랜턴 디테일" src="images/photo_05.jpg"/><figcaption>Warm Light</figcaption></figure>
+<figure><img alt="책장 디테일" src="images/photo_06.jpg"/><figcaption>Old Books</figcaption></figure>
+<figure class="wide"><img alt="미니 소다존 전체컷" src="images/photo_03.jpg"/><figcaption>Mini Soda Zone</figcaption></figure>
+<figure><img alt="미니 소다존 거울 디테일" src="images/photo_07.jpg"/><figcaption>Soda Detail</figcaption></figure>
+<figure class="tall"><img alt="미니 소다존 화병 디테일" src="images/photo_08.jpg"/><figcaption>Pink Flowers</figcaption></figure>
+<figure class="wide"><img alt="화이트 호리존" src="images/photo_04.jpg"/><figcaption>White Horizon</figcaption></figure>
+<figure><img alt="분장실" src="images/photo_09.jpg"/><figcaption>Dressing Room</figcaption></figure>
+</div>
+</div>
+</section>
+<section id="price" style="background:#f9f5ec">
+<div class="wrap">
+<h2 class="section-title">Price</h2>
+<p class="lead">예약 시간에는 분장, 환복, 촬영, 정리 시간이 모두 포함됩니다.</p>
+<div class="two">
+<div class="card price-card"><span class="badge">기본 대관</span><h3>시간당</h3><strong>35,000원</strong><p>최소 2시간부터 예약 가능하며, 기본 4인 기준으로 이용 가능합니다.</p></div>
+<div class="card price-card"><span class="badge">추가 인원</span><h3>1인 추가 시</h3><strong>5,000원</strong><p>기본 4인 초과 시 1인당 추가됩니다.</p></div>
+</div>
+<div class="notice-box"><strong>킨텍스 행사 참가자를 위한 특별 혜택</strong><br/>킨텍스에서 개최되는 서브컬처 행사(애니메이션·게임·코스프레 등)에 참가하시는 분께 티켓 또는 예매 내역 인증 시 5,000원 할인을 제공합니다.</div>
+<ul class="rules">
+<li>분장, 환복, 촬영, 정리 시간은 모두 예약 시간에 포함됩니다.</li>
+<li>예약 종료 시간을 초과할 경우 30분 단위로 추가 요금이 계산됩니다.</li>
+<li>다음 예약이 있는 경우 현장 연장이 불가능할 수 있습니다.</li>
+</ul>
+</div>
+</section>
+<section class="calendar-section" id="schedule">
+<div class="wrap">
+<h2 class="section-title">Schedule</h2>
+<p class="lead">예약 전 아래 캘린더에서 가능한 날짜와 시간을 먼저 확인해 주세요. 비어 있는 시간대는 카카오톡 채널로 문의해 주시면 예약을 도와드립니다.</p>
+<div class="calendar-box"><iframe frameborder="0" height="600" scrolling="no" src="https://calendar.google.com/calendar/embed?src=sonnetstudio8%40gmail.com&amp;ctz=Asia%2FSeoul" style="border:0" width="800"></iframe></div>
+</div>
+</section>
+<section id="location">
+<div class="wrap">
+<h2 class="section-title">Location</h2>
+<p class="lead">킨텍스 인근, 행사 전후 방문하기 좋은 위치에 있습니다.</p>
+<div class="location-grid">
+<div class="card">
+<h3>소네트 스튜디오</h3>
+<p>경기도 고양시 일산서구 대화동 2278-4<br/>지하 1층 B01호</p>
+<div class="walk-list">
+<div class="walk-item"><span>킨텍스</span><span>도보 약 5분</span></div>
+<div class="walk-item"><span>대화역</span><span>도보 약 15분</span></div>
+<div class="walk-item"><span>킨텍스역</span><span>도보 약 18분</span></div>
+</div>
+<div class="map-buttons">
+<a href="https://map.naver.com/p/search/%EC%86%8C%EB%84%A4%ED%8A%B8%EC%8A%A4%ED%8A%9C%EB%94%94%EC%98%A4" rel="noopener" target="_blank">네이버 지도에서 보기</a>
+<a href="https://map.kakao.com/link/search/%EC%86%8C%EB%84%A4%ED%8A%B8%EC%8A%A4%ED%8A%9C%EB%94%94%EC%98%A4" rel="noopener" target="_blank">카카오맵에서 보기</a>
+</div>
+</div>
+<div class="map-card real-map-card">
+<h3>지도</h3>
+<iframe allowfullscreen="" height="340" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EA%B3%A0%EC%96%91%EC%8B%9C%20%EC%9D%BC%EC%82%B0%EC%84%9C%EA%B5%AC%20%EB%8C%80%ED%99%94%EB%8F%99%202278-4&amp;output=embed" style="border:0; border-radius:24px;" width="100%">
+</iframe>
+</div>
+</div>
+</div>
+</section>
+<section id="facility" style="background:#ede5d5">
+<div class="wrap">
+<h2 class="section-title">Facility</h2>
+<p class="lead">촬영에 필요한 기본 시설을 준비해두었습니다.</p>
+<div class="facility-grid">
+<div class="facility-item">🌳 숲속 공방 컨셉존</div>
+<div class="facility-item">🌸 미니 소다존</div>
+<div class="facility-item">🤍 화이트 호리존</div>
+<div class="facility-item">💄 분장실</div>
+<div class="facility-item">🚪 탈의 공간</div>
+<div class="facility-item">💡 촬영 조명</div>
+<div class="facility-item">📸 촬영 소품</div>
+<div class="facility-item">📶 Wi-Fi</div>
+<div class="facility-item">💧 제습 시설</div>
+<div class="facility-item">🅿️ 전용 주차장 없음</div>
+<div class="facility-item">🍔 음식물 반입 불가</div>
+</div>
+</div>
+</section>
+<section id="equipment">
+<div class="wrap">
+<h2 class="section-title">Lighting Equipment</h2>
+<p class="lead">기본 촬영 조명은 자유롭게 이용 가능하며, 스모그 머신은 유료 장비입니다.</p>
+<div class="equipment-list">
+<div class="card">
+<span class="badge">기본 제공</span>
+<h3>조명 장비</h3>
+<ul>
+<li>Aputure Amaran 150c × 1</li>
+<li>Godox LE300Bi × 1</li>
+<li>팔각 소프트박스 × 2</li>
+<li>사각 소프트박스 × 1</li>
+<li>옵티컬 스누트 × 1</li>
+</ul>
+</div>
+<div class="card price-card">
+<span class="badge">유료 장비</span>
+<h3>스모그 머신 × 1</h3>
+<strong>10,000원</strong>
+<p>사용을 원하실 경우 예약 시 미리 말씀해 주세요.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="faq" style="background:#f9f5ec">
+<div class="wrap">
+<h2 class="section-title">FAQ</h2>
+<div class="faq">
+<div class="faq-item"><h3>음식 섭취가 가능한가요?</h3><p>실내 음식물 반입 및 섭취는 어렵습니다. 지하 공간 특성과 조화 및 소품 보호를 위해 습기와 오염에 민감한 환경을 유지하고 있습니다.</p></div>
+<div class="faq-item"><h3>주차가 가능한가요?</h3><p>전용 주차장은 제공되지 않습니다. 킨텍스 인근 공영 및 민영 주차장을 이용해 주세요.</p></div>
+<div class="faq-item"><h3>탈의실이 있나요?</h3><p>네. 분장실 옆에 별도의 탈의 공간이 마련되어 있습니다.</p></div>
+<div class="faq-item"><h3>조명을 사용할 수 있나요?</h3><p>네. 기본 촬영 조명은 자유롭게 이용 가능하며, 스모그 머신은 10,000원의 추가 비용으로 이용하실 수 있습니다.</p></div>
+</div>
+</div>
+</section>
+<section id="notice" style="background:#f9f5ec">
+<div class="wrap">
+<h2 class="section-title">이용 시 주의사항</h2>
+<ul class="rules">
+<li>AV 영상 촬영 및 과도하게 선정적인 촬영은 금지됩니다.</li>
+<li>화장실을 포함한 건물 전체는 금연입니다.</li>
+<li>호리존 이용 시 반드시 마킹테이프를 부착한 후 이용해 주세요.</li>
+<li>호리존 오염이 심하거나 원상복구가 어려운 경우 복구 비용이 청구될 수 있습니다.</li>
+<li>조화 및 소품 보호를 위해 음식물 반입은 불가합니다.</li>
+<li>이용하신 소품은 원래 위치로 정리 부탁드립니다.</li>
+<li>가벽의 원형창에는 실제 유리가 설치되어 있으므로 기대거나 무게를 싣지 말아 주세요.</li>
+</ul>
+</div>
+</section>
+
+<section id="refund-policy" style="background:#ede5d5">
+<div class="wrap">
+<h2 class="section-title">예약 변경 및 환불 안내</h2>
+<ul class="rules">
+<li>예약 변경은 이용일 기준 <strong>3일 전까지 1회</strong> 가능합니다.</li>
+<li>이용일 <strong>7일 전 취소:</strong> 100% 환불</li>
+<li>이용일 <strong>5일 전 취소:</strong> 50% 환불</li>
+<li>이용일 <strong>3일 전부터 당일 취소:</strong> 환불이 불가합니다.</li>
+<li>예약 시간 이후 도착하거나 남은 시간을 사용하지 못한 경우에도 환불은 불가합니다.</li>
+<li>기상 악화, 교통 문제, 개인 사정 등으로 인한 취소 및 변경도 동일한 환불 규정이 적용됩니다.</li>
+</ul>
+</div>
+</section>
+<section class="reservation" id="reservation">
+<div class="wrap reservation-box">
+<div>
+<h2 class="section-title">예약 문의</h2>
+<p class="lead">원하는 날짜, 시간, 인원, 촬영 목적을 함께 보내주시면 확인 후 안내드립니다.</p>
+<div class="channel-id">카카오톡 검색 ID · @소네트스튜디오</div><br/>
+<a class="btn gold" href="http://pf.kakao.com/_KCxlPX">카카오톡 채널로 예약 문의하기</a>
+</div>
+<div class="qr-card">
+<img alt="소네트 스튜디오 카카오톡 채널 QR 코드" src="images/photo_10.jpg"/>
+<strong>소네트 스튜디오</strong>
+<p>QR을 스캔하거나<br/>@소네트스튜디오를 검색해 주세요.</p>
+</div>
+</div>
+</section>
+<section>
+<div class="wrap">
+<h2 class="section-title">Contact</h2>
+<table class="info-table">
+<tr><th>주소</th><td>경기도 고양시 일산서구 대화동 2278-4, 지하 1층 B01호 / 소네트 스튜디오</td></tr>
+<tr><th>문의</th><td>카카오톡 채널: <a href="http://pf.kakao.com/_KCxlPX">http://pf.kakao.com/_KCxlPX</a><br/>검색 ID: @소네트스튜디오<br/>X: @sonnet_studio<br/>이메일: sonnetstudio8@gmail.com<br/>전화: 010-6684-8125</td></tr>
+</table>
+</div>
+</section>
+<footer>
+<div class="wrap">
+      SONNET STUDIO · Kakao @소네트스튜디오 · X @sonnet_studio · sonnetstudio8@gmail.com
+      <div class="tagline">소네트 스튜디오는 코스프레 문화를 응원합니다. 🌿</div>
+<br/>© Sonnet Studio. All rights reserved.
+    </div>
+</footer>
+</body>
+</html>
