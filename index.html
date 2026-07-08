@@ -59,6 +59,22 @@
     .logo { font-family:Georgia,"Noto Serif KR",serif; font-size:22px; letter-spacing:.12em; }
     .navlinks { display:flex; gap:16px; opacity:.94; }
     .navlinks a { text-decoration:none; }
+
+    .nav-right {
+      display:flex; align-items:center; gap:22px;
+    }
+    .lang-switch {
+      display:flex; align-items:center; gap:8px;
+      padding:7px 12px; border:1px solid rgba(255,250,241,.42);
+      border-radius:999px; background:rgba(32,39,31,.22);
+      backdrop-filter:blur(8px); font-size:13px; font-weight:900; letter-spacing:.08em;
+      white-space:nowrap;
+    }
+    .lang-switch a { text-decoration:none; opacity:.65; }
+    .lang-switch a:hover { opacity:1; }
+    .lang-switch a.active { opacity:1; color:#e6d2a4; pointer-events:none; }
+    .lang-switch span { opacity:.45; }
+
     .hero { max-width:1120px; width:100%; margin:90px auto 0; }
     .eyebrow { color:#e6d2a4; letter-spacing:.2em; font-size:13px; margin-bottom:18px; font-weight:800; }
     h1 {
@@ -169,6 +185,8 @@
       .gallery { grid-template-columns:1fr 1fr; grid-auto-rows:190px; }
       .gallery .wide { grid-column:span 2; }
       .navlinks { display:none; }
+      .nav-right { gap:0; }
+      .lang-switch { padding:7px 11px; font-size:12px; }
       header { min-height:82vh; }
       section { padding:64px 18px; }
       .calendar-box iframe { height:520px; }
@@ -218,9 +236,14 @@
 <header>
 <nav>
 <div class="logo">SONNET STUDIO</div>
+<div class="nav-right">
 <div class="navlinks">
 <a href="#concept">CONCEPT</a><a href="#gallery">GALLERY</a><a href="#price">PRICE</a>
 <a href="#schedule">SCHEDULE</a><a href="#location">LOCATION</a><a href="#reservation">RESERVATION</a>
+</div>
+<div aria-label="언어 선택" class="lang-switch">
+<a class="active" href="./index.html">KR</a><span>|</span><a href="./ja.html">JP</a>
+</div>
 </div>
 </nav>
 <div class="hero">
@@ -382,7 +405,7 @@
 <ul class="rules">
 <li>AV 영상 촬영 및 과도하게 선정적인 촬영은 금지됩니다.</li>
 <li>화장실을 포함한 건물 전체는 금연입니다.</li>
-<li>호리존 이용 시 반드시 마킹테이프를 부착한 후 이용해 주세요.</li>
+<li>호리존 이용 시 반드시 마스킹테이프를 부착한 후 이용해 주세요.</li>
 <li>호리존 오염이 심하거나 원상복구가 어려운 경우 복구 비용이 청구될 수 있습니다.</li>
 <li>조화 및 소품 보호를 위해 음식물 반입은 불가합니다.</li>
 <li>이용하신 소품은 원래 위치로 정리 부탁드립니다.</li>
