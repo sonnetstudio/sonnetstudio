@@ -4,8 +4,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Sonnet Studio | KINTEX近くのコスプレレンタルスタジオ</title>
-<meta content="KINTEXから徒歩約5分。森のアトリエコンセプトゾーン、ミニソーダゾーン、白ホリゾント、メイクルーム・更衣スペースを利用できるコスプレ向けレンタルスタジオです。" name="description"/>
+<title>ソネットスタジオ | KINTEX近くのコスプレレンタルスタジオ</title>
+<meta content="KINTEXから徒歩5分。森のアトリエ、ミニソーダゾーン、白ホリゾント、メイクルームと更衣スペースを利用できるコスプレレンタルスタジオです。" name="description"/>
 <style>
     :root {
       --bg:#f5efe4; --paper:#fffaf1; --deep:#2f3a2d; --deep2:#20271f;
@@ -14,7 +14,7 @@
     * { box-sizing:border-box; }
     html { scroll-behavior:smooth; }
     body {
-      margin:0; font-family:"Pretendard","Noto Sans JP","Noto Sans KR",system-ui,-apple-system,sans-serif;
+      margin:0; font-family:"Pretendard","Noto Sans KR",system-ui,-apple-system,sans-serif;
       background:var(--bg); color:var(--deep); line-height:1.68; word-break:keep-all;
     }
     a { color:inherit; }
@@ -42,7 +42,7 @@
     header:before {
       content:""; position:absolute; inset:0;
       background:linear-gradient(90deg, rgba(21,25,20,.78) 0%, rgba(47,58,45,.38) 48%, rgba(21,25,20,.34) 100%),
-                 url("images/photo_01.jpg") center/cover no-repeat;
+                 url("images/hero_main.jpg") center 52%/cover no-repeat;
       transform:scale(1.02); animation:slowzoom 18s ease-in-out infinite alternate; z-index:-2;
     }
     header:after {
@@ -56,7 +56,7 @@
       max-width:1120px; margin:0 auto; width:100%; display:flex; justify-content:space-between;
       align-items:center; font-size:14px; letter-spacing:.08em;
     }
-    .logo { font-family:Georgia,"Noto Serif JP","Noto Serif KR",serif; font-size:22px; letter-spacing:.12em; }
+    .logo { font-family:Georgia,"Noto Serif KR",serif; font-size:22px; letter-spacing:.12em; }
     .navlinks { display:flex; gap:16px; opacity:.94; }
     .navlinks a { text-decoration:none; }
 
@@ -78,7 +78,7 @@
     .hero { max-width:1120px; width:100%; margin:90px auto 0; }
     .eyebrow { color:#e6d2a4; letter-spacing:.2em; font-size:13px; margin-bottom:18px; font-weight:800; }
     h1 {
-      font-family:Georgia,"Noto Serif JP","Noto Serif KR",serif; font-size:clamp(42px,8vw,92px);
+      font-family:Georgia,"Noto Serif KR",serif; font-size:clamp(42px,8vw,92px);
       line-height:1.05; margin:0 0 22px; font-weight:500; text-shadow:0 14px 35px rgba(0,0,0,.26);
     }
     .hero p { max-width:640px; font-size:18px; color:#f8ead3; margin:0 0 32px; text-shadow:0 8px 24px rgba(0,0,0,.28); }
@@ -95,7 +95,7 @@
     section { padding:88px 22px; }
     .wrap { max-width:1120px; margin:0 auto; }
     .section-title {
-      font-family:Georgia,"Noto Serif JP","Noto Serif KR",serif; font-size:38px; line-height:1.2;
+      font-family:Georgia,"Noto Serif KR",serif; font-size:38px; line-height:1.2;
       margin:0 0 16px; font-weight:500;
     }
     .lead { font-size:18px; color:var(--muted); max-width:780px; margin:0; }
@@ -128,7 +128,7 @@
       color:#fffaf1; font-weight:900; background:linear-gradient(transparent, rgba(0,0,0,.55)); font-size:14px;
     }
 
-    .price-card strong { display:block; font-size:40px; line-height:1.15; font-family:Georgia,"Noto Serif JP","Noto Serif KR",serif; color:var(--gold); margin:6px 0 8px; }
+    .price-card strong { display:block; font-size:40px; line-height:1.15; font-family:Georgia,"Noto Serif KR",serif; color:var(--gold); margin:6px 0 8px; }
     .badge { display:inline-block; background:#efe2c6; color:#685638; border-radius:999px; padding:6px 11px; font-size:13px; font-weight:900; margin-bottom:12px; }
     .notice-box { margin-top:28px; border-left:5px solid var(--gold); background:var(--paper); padding:22px 24px; border-radius:20px; color:var(--muted); box-shadow:0 12px 28px rgba(47,58,45,.05); }
     .rules { margin:26px 0 0; padding-left:20px; color:var(--muted); }
@@ -179,8 +179,38 @@
     footer { padding:34px 22px; background:var(--deep2); color:#d9cdb9; font-size:14px; }
     footer .tagline { margin-top:10px; color:#efe2c6; font-weight:900; }
 
+
+    .portfolio-section { background:#2b3429; color:#fffaf1; }
+    .portfolio-section .section-title { color:#fffaf1; }
+    .portfolio-section .lead { color:#d9cfbd; }
+    .portfolio-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:36px; }
+    .portfolio-card {
+      min-height:390px; position:relative; border-radius:30px; overflow:hidden; isolation:isolate;
+      display:flex; align-items:flex-end; text-decoration:none; box-shadow:0 20px 48px rgba(0,0,0,.22);
+      border:1px solid rgba(255,250,241,.18); background:#1d231c;
+    }
+    .portfolio-card:before {
+      content:""; position:absolute; inset:0; z-index:-2; background-position:center; background-size:cover;
+      transition:transform .5s ease, filter .5s ease;
+    }
+    .portfolio-card:after {
+      content:""; position:absolute; inset:0; z-index:-1;
+      background:linear-gradient(180deg, rgba(10,12,10,.04) 20%, rgba(12,15,12,.88) 100%);
+    }
+    .portfolio-card:hover:before { transform:scale(1.055); filter:saturate(1.05); }
+    .portfolio-card.soda:before { background-image:url("images/portfolio/soda_01.jpg"); background-position:53% center; }
+    .portfolio-card.atelier:before { background-image:url("images/portfolio/atelier_01.jpg"); background-position:center; }
+    .portfolio-card.horizon:before { background-image:url("images/portfolio/horizon_01.jpg"); background-position:center; }
+    .portfolio-copy { width:100%; padding:30px 26px 26px; }
+    .portfolio-copy small { display:block; color:#e6d2a4; font-weight:900; letter-spacing:.12em; margin-bottom:7px; }
+    .portfolio-copy h3 { margin:0; font-family:Georgia,"Noto Serif KR",serif; font-size:27px; font-weight:500; }
+    .portfolio-copy p { margin:8px 0 18px; color:#e9dfcf; font-size:14px; }
+    .portfolio-link { display:inline-flex; align-items:center; gap:7px; font-weight:900; font-size:14px; }
+    .portfolio-link:after { content:"→"; transition:transform .18s ease; }
+    .portfolio-card:hover .portfolio-link:after { transform:translateX(4px); }
+
     @media(max-width:950px) {
-      .grid,.two,.feature,.reservation-box,.location-grid,.equipment-list,.faq { grid-template-columns:1fr; }
+      .grid,.two,.feature,.reservation-box,.location-grid,.equipment-list,.faq,.portfolio-grid { grid-template-columns:1fr; }
       .facility-grid { grid-template-columns:1fr 1fr; }
       .gallery { grid-template-columns:1fr 1fr; grid-auto-rows:190px; }
       .gallery .wide { grid-column:span 2; }
@@ -188,6 +218,7 @@
       .nav-right { gap:0; }
       .lang-switch { padding:7px 11px; font-size:12px; }
       header { min-height:82vh; }
+      .portfolio-card { min-height:340px; }
       section { padding:64px 18px; }
       .calendar-box iframe { height:520px; }
     }
@@ -200,6 +231,8 @@
       .walk-item { flex-direction:column; gap:2px; }
       .info-table th,.info-table td { display:block; width:100%; }
       .info-table th { padding-bottom:4px; }
+      header:before { background-position:58% center; }
+      .portfolio-card { min-height:310px; }
       .info-table td { padding-top:4px; }
     }
   
@@ -225,10 +258,10 @@
     }
 
   </style>
-<meta content="Sonnet Studio | KINTEX近くのコスプレレンタルスタジオ" property="og:title"/>
-<meta content="木漏れ日の中で物語を紡ぐ。イベント前後にも立ち寄りやすい、KINTEX近くのファンタジーコンセプトスタジオ。" property="og:description"/>
+<meta content="ソネットスタジオ | KINTEX近くのコスプレレンタルスタジオ" property="og:title"/>
+<meta content="木漏れ日の中で物語を紡ぐ。イベントの前後に立ち寄れる、いちばん近いファンタジーコンセプトスタジオ。" property="og:description"/>
 <meta content="website" property="og:type"/>
-<meta content="images/photo_01.jpg" property="og:image"/>
+<meta content="images/hero_main.jpg" property="og:image"/>
 <meta content="summary_large_image" name="twitter:card"/>
 </head>
 <body>
@@ -238,10 +271,10 @@
 <div class="logo">SONNET STUDIO</div>
 <div class="nav-right">
 <div class="navlinks">
-<a href="#concept">CONCEPT</a><a href="#gallery">GALLERY</a><a href="#price">PRICE</a>
-<a href="#schedule">SCHEDULE</a><a href="#location">ACCESS</a><a href="#reservation">RESERVATION</a>
+<a href="#concept">CONCEPT</a><a href="#gallery">GALLERY</a><a href="#portfolio">PORTFOLIO</a><a href="#price">PRICE</a>
+<a href="#schedule">SCHEDULE</a><a href="#location">LOCATION</a><a href="#reservation">RESERVATION</a>
 </div>
-<div aria-label="Language selection" class="lang-switch">
+<div aria-label="言語選択" class="lang-switch">
 <a href="./index.html">KR</a><span>|</span><a class="active" href="./ja.html">JP</a>
 </div>
 </div>
@@ -249,9 +282,9 @@
 <div class="hero">
 <div class="eyebrow">FOREST ATELIER COSPLAY STUDIO</div>
 <h1>木漏れ日の中で<br/>物語を紡ぐ</h1>
-<p>イベント前後にも立ち寄りやすい、KINTEX近くのファンタジーコンセプトスタジオ。KINTEXから徒歩約5分の、小さな森のアトリエです。</p>
+<p>イベントの前後に立ち寄れる、いちばん近いファンタジーコンセプトスタジオ。KINTEXから徒歩5分の小さな森のアトリエです。</p>
 <div class="buttons">
-<a class="btn primary" href="#schedule">予約状況を確認する</a>
+<a class="btn primary" href="#schedule">予約状況を確認</a>
 <a class="btn ghost" href="#reservation">KakaoTalkで予約</a>
 <a class="btn ghost" href="#location">アクセス</a>
 </div>
@@ -260,71 +293,87 @@
 <section>
 <div class="wrap feature">
 <div>
-<h2 class="section-title">手入れされた古い工房のように</h2>
-<p class="lead">Sonnet Studioは、荒れた廃墟ではなく、魔法使いが少し席を外したような温かい森のアトリエを目指しています。森のアトリエコンセプトゾーン、ミニソーダゾーン、白ホリゾント、メイクルーム、更衣スペースまで、1回のご予約でご利用いただけます。</p>
+<h2 class="section-title">丁寧に手入れされた古いアトリエのように</h2>
+<p class="lead">ソネットスタジオが目指すのは古びた廃墟ではなく、魔法使いが少し席を外したかのような温かな森のアトリエです。森のアトリエ、ミニソーダゾーン、白ホリゾント、メイクルーム、更衣スペースをひとつの予約でご利用いただけます。</p>
 </div>
 <div class="image-card intro-photo no-crop-photo">
-<img alt="Sonnet Studio アトリエのディテール" src="images/photo_02.jpg"/>
+<img alt="ソネットスタジオ アトリエのディテール" src="images/photo_02.jpg"/>
 </div>
 </div>
 </section>
 <section id="concept" style="background:#ede5d5">
 <div class="wrap">
 <h2 class="section-title">Concept Rooms</h2>
-<p class="lead">ひとつの空間で、異なる雰囲気の撮影を続けて楽しめます。</p>
+<p class="lead">異なる雰囲気の撮影を、ひとつの空間で続けて楽しめます。</p>
 <div class="grid">
-<div class="card"><div class="thumb"><img alt="森のアトリエコンセプトゾーン" src="images/photo_01.jpg"/></div><h3>Forest Atelier</h3><p>丸窓、本棚、木のオブジェ、苔と蔦で構成されたメインコンセプトゾーン。</p></div>
-<div class="card"><div class="thumb"><img alt="ミニソーダゾーン 全体カット" src="images/photo_03.jpg"/></div><h3>Mini Soda Zone</h3><p>Soda Studioとのコラボレーションで制作されたミニソーダゾーン。花とカーテン、やわらかなピンクトーンで構成された感性コンセプト空間です。</p></div>
-<div class="card"><div class="thumb"><img alt="白ホリゾント" src="images/photo_04.jpg"/></div><h3>White Horizon</h3><p>全身カット、プロフィール、グッズ用写真の撮影に適したシンプルなホリゾント。</p></div>
+<div class="card"><div class="thumb"><img alt="森のアトリエ" src="images/photo_01.jpg"/></div><h3>Forest Atelier</h3><p>円形窓、本棚、木のオブジェ、苔と蔓で構成されたメインコンセプトゾーン。</p></div>
+<div class="card"><div class="thumb"><img alt="ミニソーダゾーン 全景" src="images/photo_03.jpg"/></div><h3>Mini Soda Zone</h3><p>ソーダスタジオとのコラボレーションで制作したミニソーダゾーン。花とカーテン、やわらかなピンクトーンで構成されたコンセプト空間です。</p></div>
+<div class="card"><div class="thumb"><img alt="白ホリゾント" src="images/photo_04.jpg"/></div><h3>White Horizon</h3><p>全身写真、プロフィール、グッズ用写真に適したシンプルな白ホリゾント。</p></div>
 </div>
 </div>
 </section>
 <section id="gallery">
 <div class="wrap">
 <h2 class="section-title">Gallery</h2>
-<p class="lead">空間全体の雰囲気とディテールカットをあわせてご確認ください。</p>
+<p class="lead">空間全体の雰囲気とディテールカットをご覧ください。</p>
 <div class="gallery">
-<figure class="wide"><img alt="森のアトリエ 全体" src="images/photo_01.jpg"/><figcaption>Forest Atelier</figcaption></figure>
+<figure class="wide"><img alt="森のアトリエ 全景" src="images/photo_01.jpg"/><figcaption>Forest Atelier</figcaption></figure>
 <figure><img alt="ランタンのディテール" src="images/photo_05.jpg"/><figcaption>Warm Light</figcaption></figure>
 <figure><img alt="本棚のディテール" src="images/photo_06.jpg"/><figcaption>Old Books</figcaption></figure>
-<figure class="wide"><img alt="ミニソーダゾーン 全体カット" src="images/photo_03.jpg"/><figcaption>Mini Soda Zone</figcaption></figure>
+<figure class="wide"><img alt="ミニソーダゾーン 全景" src="images/photo_03.jpg"/><figcaption>Mini Soda Zone</figcaption></figure>
 <figure><img alt="ミニソーダゾーン 鏡のディテール" src="images/photo_07.jpg"/><figcaption>Soda Detail</figcaption></figure>
-<figure class="tall"><img alt="ミニソーダゾーン 花瓶のディテール" src="images/photo_08.jpg"/><figcaption>Pink Flowers</figcaption></figure>
+<figure class="tall"><img alt="ミニソーダゾーン 花のディテール" src="images/photo_08.jpg"/><figcaption>Pink Flowers</figcaption></figure>
 <figure class="wide"><img alt="白ホリゾント" src="images/photo_04.jpg"/><figcaption>White Horizon</figcaption></figure>
 <figure><img alt="メイクルーム" src="images/photo_09.jpg"/><figcaption>Dressing Room</figcaption></figure>
+</div>
+</div>
+</section><section class="portfolio-section" id="portfolio">
+<div class="wrap">
+<h2 class="section-title">スペース別 撮影作例</h2>
+<p class="lead">各スペースで実際に撮影したモデル写真から、照明や衣装によって変わる雰囲気をご覧ください。</p>
+<div class="portfolio-grid">
+<a aria-label="ミニソーダゾーンの撮影作例を見る" class="portfolio-card soda" href="gallery-ja.html#soda">
+<div class="portfolio-copy"><small>MINI SODA ZONE</small><h3>ミニソーダゾーン</h3><p>華やかなピンクトーンからドラマチックなカラー照明まで。</p><span class="portfolio-link">撮影作例を見る</span></div>
+</a>
+<a aria-label="魔法使いのアトリエの撮影作例を見る" class="portfolio-card atelier" href="gallery-ja.html#atelier">
+<div class="portfolio-copy"><small>MAGIC ATELIER</small><h3>魔法使いのアトリエ</h3><p>円形窓と机、古い本が生み出すファンタジーの雰囲気。</p><span class="portfolio-link">撮影作例を見る</span></div>
+</a>
+<a aria-label="白ホリゾントの撮影作例を見る" class="portfolio-card horizon" href="gallery-ja.html#horizon">
+<div class="portfolio-copy"><small>WHITE HORIZON</small><h3>白ホリゾント</h3><p>全身、プロフィール、グループ撮影まで自由に使える白背景。</p><span class="portfolio-link">撮影作例を見る</span></div>
+</a>
 </div>
 </div>
 </section>
 <section id="price" style="background:#f9f5ec">
 <div class="wrap">
 <h2 class="section-title">Price</h2>
-<p class="lead">ご予約時間には、メイク・着替え・撮影・片付けの時間がすべて含まれます。</p>
+<p class="lead">予約時間にはメイク、着替え、撮影、片付けの時間がすべて含まれます。</p>
 <div class="two">
-<div class="card price-card"><span class="badge">基本レンタル</span><h3>1時間あたり</h3><strong>35,000ウォン</strong><p>2時間からご予約可能で、基本4名様までご利用いただけます。</p></div>
-<div class="card price-card"><span class="badge">追加人数</span><h3>1名追加につき</h3><strong>5,000ウォン</strong><p>基本4名を超える場合、1名ごとに追加料金が発生します。</p></div>
+<div class="card price-card"><span class="badge">基本料金</span><h3>1時間</h3><strong>35,000ウォン</strong><p>2時間から予約可能で、基本4名までご利用いただけます。</p></div>
+<div class="card price-card"><span class="badge">追加人数</span><h3>1名追加</h3><strong>5,000ウォン</strong><p>基本の4名を超える場合、1名ごとに追加されます。</p></div>
 </div>
-<div class="notice-box"><strong>KINTEXイベント参加者向け特典</strong><br/>KINTEXで開催されるサブカルチャーイベント（アニメ・ゲーム・コスプレなど）に参加される方は、チケットまたは予約履歴のご提示で5,000ウォンをキャッシュバックいたします。</div>
+<div class="notice-box"><strong>KINTEXイベント参加者向け特典</strong><br/>KINTEXで開催されるサブカルチャーイベント（アニメ・ゲーム・コスプレなど）に参加される方は、チケットまたは予約履歴の確認で5,000ウォンをキャッシュバックいたします。</div>
 <ul class="rules">
-<li>メイク、着替え、撮影、片付けの時間はすべてご予約時間に含まれます。</li>
-<li>ご予約終了時間を過ぎた場合、30分単位で追加料金が発生します。</li>
-<li>次のご予約がある場合、当日の延長はできないことがあります。</li>
+<li>メイク、着替え、撮影、片付けの時間はすべて予約時間に含まれます。</li>
+<li>予約終了時間を超過した場合、30分単位で追加料金が発生します。</li>
+<li>次の予約がある場合、当日の延長はできないことがあります。</li>
 </ul>
 </div>
 </section>
 <section class="calendar-section" id="schedule">
 <div class="wrap">
 <h2 class="section-title">Schedule</h2>
-<p class="lead">ご予約前に、下記カレンダーで空き日時をご確認ください。空いている時間帯はKakaoTalkチャンネルよりお問い合わせいただければご案内いたします。</p>
+<p class="lead">ご予約前に、下のカレンダーで空き日時をご確認ください。空いている時間帯はKakaoTalkチャンネルからお問い合わせいただければご案内いたします。</p>
 <div class="calendar-box"><iframe frameborder="0" height="600" scrolling="no" src="https://calendar.google.com/calendar/embed?src=sonnetstudio8%40gmail.com&amp;ctz=Asia%2FSeoul" style="border:0" width="800"></iframe></div>
 </div>
 </section>
 <section id="location">
 <div class="wrap">
 <h2 class="section-title">Location</h2>
-<p class="lead">KINTEX近く、イベント前後にも立ち寄りやすい場所にあります。</p>
+<p class="lead">KINTEXの近くにあり、イベントの前後に立ち寄りやすい場所です。</p>
 <div class="location-grid">
 <div class="card">
-<h3>Sonnet Studio</h3>
+<h3>ソネットスタジオ</h3>
 <p>京畿道 高陽市 一山西区 大化洞 2278-4<br/>地下1階 B01号</p>
 <div class="walk-list">
 <div class="walk-item"><span>KINTEX</span><span>徒歩約5分</span></div>
@@ -332,12 +381,12 @@
 <div class="walk-item"><span>KINTEX駅</span><span>徒歩約18分</span></div>
 </div>
 <div class="map-buttons">
-<a href="https://map.naver.com/p/search/%EC%86%8C%EB%84%A4%ED%8A%B8%EC%8A%A4%ED%8A%9C%EB%94%94%EC%98%A4" rel="noopener" target="_blank">NAVER Mapで見る</a>
+<a href="https://map.naver.com/p/search/%EC%86%8C%EB%84%A4%ED%8A%B8%EC%8A%A4%ED%8A%9C%EB%94%94%EC%98%A4" rel="noopener" target="_blank">NAVERマップで見る</a>
 <a href="https://map.kakao.com/link/search/%EC%86%8C%EB%84%A4%ED%8A%B8%EC%8A%A4%ED%8A%9C%EB%94%94%EC%98%A4" rel="noopener" target="_blank">KakaoMapで見る</a>
 </div>
 </div>
 <div class="map-card real-map-card">
-<h3>Map</h3>
+<h3>地図</h3>
 <iframe allowfullscreen="" height="340" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EA%B3%A0%EC%96%91%EC%8B%9C%20%EC%9D%BC%EC%82%B0%EC%84%9C%EA%B5%AC%20%EB%8C%80%ED%99%94%EB%8F%99%202278-4&amp;output=embed" style="border:0; border-radius:24px;" width="100%">
 </iframe>
 </div>
@@ -349,7 +398,7 @@
 <h2 class="section-title">Facility</h2>
 <p class="lead">撮影に必要な基本設備をご用意しています。</p>
 <div class="facility-grid">
-<div class="facility-item">🌳 森のアトリエコンセプトゾーン</div>
+<div class="facility-item">🌳 森のアトリエ</div>
 <div class="facility-item">🌸 ミニソーダゾーン</div>
 <div class="facility-item">🤍 白ホリゾント</div>
 <div class="facility-item">💄 メイクルーム</div>
@@ -359,23 +408,23 @@
 <div class="facility-item">📶 Wi-Fi</div>
 <div class="facility-item">💧 除湿設備</div>
 <div class="facility-item">🅿️ 専用駐車場なし</div>
-<div class="facility-item">🍔 飲食物持ち込み不可</div>
+<div class="facility-item">🍔 飲食物の持ち込み不可</div>
 </div>
 </div>
 </section>
 <section id="equipment">
 <div class="wrap">
 <h2 class="section-title">Lighting Equipment</h2>
-<p class="lead">基本撮影照明は自由にご利用いただけます。スモークマシンは有料機材です。</p>
+<p class="lead">基本の撮影照明は自由にご利用いただけます。スモークマシンは有料です。</p>
 <div class="equipment-list">
 <div class="card">
-<span class="badge">基本提供</span>
+<span class="badge">無料設備</span>
 <h3>照明機材</h3>
 <ul>
 <li>Aputure Amaran 150c × 1</li>
 <li>Godox LE300Bi × 1</li>
-<li>八角ソフトボックス × 2</li>
-<li>四角ソフトボックス × 1</li>
+<li>オクタソフトボックス × 2</li>
+<li>スクエアソフトボックス × 1</li>
 <li>オプティカルスヌート × 1</li>
 </ul>
 </div>
@@ -383,7 +432,7 @@
 <span class="badge">有料機材</span>
 <h3>スモークマシン × 1</h3>
 <strong>10,000ウォン</strong>
-<p>ご利用を希望される場合は、ご予約時にお知らせください。</p>
+<p>ご利用の場合は予約時にあらかじめお知らせください。</p>
 </div>
 </div>
 </div>
@@ -392,38 +441,37 @@
 <div class="wrap">
 <h2 class="section-title">FAQ</h2>
 <div class="faq">
-<div class="faq-item"><h3>飲食はできますか？</h3><p>室内への飲食物の持ち込みおよび飲食はご遠慮ください。地下空間の特性と造花・小物保護のため、湿気や汚れに配慮した環境を保っています。</p></div>
-<div class="faq-item"><h3>駐車はできますか？</h3><p>専用駐車場はございません。KINTEX周辺の公営・民営駐車場をご利用ください。</p></div>
-<div class="faq-item"><h3>更衣室はありますか？</h3><p>はい。メイクルームの隣に別途更衣スペースがあります。</p></div>
-<div class="faq-item"><h3>照明は使えますか？</h3><p>はい。基本撮影照明は自由にご利用いただけます。スモークマシンは10,000ウォンの追加料金でご利用いただけます。</p></div>
+<div class="faq-item"><h3>飲食はできますか？</h3><p>室内への飲食物の持ち込みおよび飲食はできません。地下空間の特性と造花・小物の保護のため、湿気や汚れを避けた環境を維持しています。</p></div>
+<div class="faq-item"><h3>駐車場はありますか？</h3><p>専用駐車場はありません。KINTEX周辺の公共・民間駐車場をご利用ください。</p></div>
+<div class="faq-item"><h3>更衣室はありますか？</h3><p>はい。メイクルームの隣に更衣スペースがあります。</p></div>
+<div class="faq-item"><h3>照明は使用できますか？</h3><p>はい。基本の撮影照明は自由にご利用いただけます。スモークマシンは追加10,000ウォンで利用可能です。</p></div>
 </div>
 </div>
 </section>
 <section id="notice" style="background:#f9f5ec">
 <div class="wrap">
-<h2 class="section-title">ご利用時の注意事項</h2>
+<h2 class="section-title">ご利用上の注意</h2>
 <ul class="rules">
-<li>AV動画撮影および過度に性的な撮影は禁止です。</li>
-<li>トイレを含む建物全体は禁煙です。</li>
-<li>ホリゾントをご利用の際は、必ずマスキングテープを貼ってからご利用ください。</li>
-<li>ホリゾントの汚れがひどい場合、または原状回復が難しい場合は、復旧費用を請求することがあります。</li>
+<li>AV動画の撮影および過度に性的な撮影は禁止です。</li>
+<li>トイレを含む建物内は全面禁煙です。</li>
+<li>白ホリゾントをご利用の際は、必ず靴底にマスキングテープを貼ってください。</li>
+<li>白ホリゾントの汚れがひどい場合や原状回復が難しい場合、修復費用を請求することがあります。</li>
 <li>造花および小物保護のため、飲食物の持ち込みはできません。</li>
-<li>ご利用後の小物は元の位置にお戻しください。</li>
-<li>造作壁の丸窓には実際のガラスが入っています。寄りかかったり体重をかけたりしないでください。</li>
+<li>使用した小物は元の位置にお戻しください。</li>
+<li>円形窓には本物のガラスが入っています。寄りかかったり、体重をかけたりしないでください。</li>
 </ul>
 </div>
 </section>
-
 <section id="refund-policy" style="background:#ede5d5">
 <div class="wrap">
-<h2 class="section-title">予約変更・キャンセルポリシー</h2>
+<h2 class="section-title">予約変更・キャンセル規定</h2>
 <ul class="rules">
 <li>予約変更はご利用日の<strong>3日前まで1回</strong>可能です。</li>
-<li>ご利用日の<strong>7日前までのキャンセル:</strong> 100%返金</li>
-<li>ご利用日の<strong>5日前までのキャンセル:</strong> 50%返金</li>
-<li>ご利用日の<strong>3日前から当日キャンセル:</strong> 返金不可</li>
-<li>ご予約時間後に到着された場合や、残り時間をご利用いただけなかった場合も返金はできません。</li>
-<li>悪天候、交通事情、個人的な事情によるキャンセル・変更にも同じキャンセルポリシーが適用されます。</li>
+<li>ご利用日の<strong>7日前まで:</strong> 100%返金</li>
+<li>ご利用日の<strong>5日前まで:</strong> 50%返金</li>
+<li>ご利用日の<strong>3日前から当日:</strong> 返金不可</li>
+<li>予約時間を過ぎて到着した場合や、残り時間を利用できなかった場合も返金はできません。</li>
+<li>悪天候、交通事情、個人的な事情によるキャンセル・変更にも同じ規定が適用されます。</li>
 </ul>
 </div>
 </section>
@@ -431,14 +479,14 @@
 <div class="wrap reservation-box">
 <div>
 <h2 class="section-title">ご予約・お問い合わせ</h2>
-<p class="lead">ご希望の日付・時間・人数・撮影目的をあわせてお送りください。確認後ご案内いたします。</p>
+<p class="lead">ご希望の日付、時間、人数、撮影目的をお送りください。確認後にご案内いたします。</p>
 <div class="channel-id">KakaoTalk検索ID · @소네트스튜디오</div><br/>
-<a class="btn gold" href="http://pf.kakao.com/_KCxlPX">KakaoTalkチャンネルで問い合わせる</a>
+<a class="btn gold" href="http://pf.kakao.com/_KCxlPX">KakaoTalkチャンネルで予約する</a>
 </div>
 <div class="qr-card">
-<img alt="Sonnet Studio KakaoTalkチャンネルQRコード" src="images/photo_10.jpg"/>
-<strong>Sonnet Studio</strong>
-<p>QRをスキャンするか<br/>@소네트스튜디오 を検索してください。</p>
+<img alt="ソネットスタジオ KakaoTalkチャンネル QRコード" src="images/photo_10.jpg"/>
+<strong>ソネットスタジオ</strong>
+<p>QRコードを読み取るか、<br/>@소네트스튜디오を検索してください。</p>
 </div>
 </div>
 </section>
@@ -446,7 +494,7 @@
 <div class="wrap">
 <h2 class="section-title">Contact</h2>
 <table class="info-table">
-<tr><th>住所</th><td>京畿道 高陽市 一山西区 大化洞 2278-4 地下1階 B01号 / Sonnet Studio</td></tr>
+<tr><th>住所</th><td>京畿道 高陽市 一山西区 大化洞 2278-4、地下1階 B01号 / ソネットスタジオ</td></tr>
 <tr><th>お問い合わせ</th><td>KakaoTalkチャンネル: <a href="http://pf.kakao.com/_KCxlPX">http://pf.kakao.com/_KCxlPX</a><br/>検索ID: @소네트스튜디오<br/>X: @sonnet_studio<br/>メール: sonnetstudio8@gmail.com</td></tr>
 </table>
 </div>
@@ -456,8 +504,6 @@
       SONNET STUDIO · Kakao @소네트스튜디오 · X @sonnet_studio · sonnetstudio8@gmail.com
 <br/>© Sonnet Studio. All rights reserved.
     </div>
-    
-    
 </footer>
 </body>
 </html>
