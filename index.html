@@ -5,7 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>소네트 스튜디오 | 킨텍스 앞 코스프레 렌탈 스튜디오</title>
-<meta content="킨텍스 도보 5분. 숲속 공방 컨셉존, 미니 소다존, 화이트 호리존, 분장실과 탈의공간을 이용할 수 있는 코스프레 렌탈 스튜디오입니다." name="description"/>
+<meta content="킨텍스 도보 5분. 블랙존, 검은 마녀의 공방, 화이트 호리존, 분장실과 탈의공간을 이용할 수 있는 다크 판타지 코스프레 렌탈 스튜디오입니다." name="description"/>
 <style>
     :root {
       --bg:#f5efe4; --paper:#fffaf1; --deep:#2f3a2d; --deep2:#20271f;
@@ -41,8 +41,8 @@
     }
     header:before {
       content:""; position:absolute; inset:0;
-      background:linear-gradient(90deg, rgba(21,25,20,.78) 0%, rgba(47,58,45,.38) 48%, rgba(21,25,20,.34) 100%),
-                 url("images/hero_main.jpg") center 52%/cover no-repeat;
+      background:linear-gradient(90deg, rgba(6,8,11,.86) 0%, rgba(14,18,22,.48) 48%, rgba(6,8,11,.50) 100%),
+                 url("images/renewal/hero_main.jpg") center 52%/cover no-repeat;
       transform:scale(1.02); animation:slowzoom 18s ease-in-out infinite alternate; z-index:-2;
     }
     header:after {
@@ -198,9 +198,9 @@
       background:linear-gradient(180deg, rgba(10,12,10,.04) 20%, rgba(12,15,12,.88) 100%);
     }
     .portfolio-card:hover:before { transform:scale(1.055); filter:saturate(1.05); }
-    .portfolio-card.soda:before { background-image:url("images/soda_01.jpg"); background-position:53% center; }
-    .portfolio-card.atelier:before { background-image:url("images/atelier_01.jpg"); background-position:center; }
-    .portfolio-card.horizon:before { background-image:url("images/horizon_01.jpg"); background-position:center; }
+    .portfolio-card.black:before { background-image:url("images/renewal/black_main.jpg"); background-position:center; }
+    .portfolio-card.atelier:before { background-image:url("images/renewal/atelier_main.jpg"); background-position:center; }
+    .portfolio-card.horizon:before { background-image:url("images/portfolio/horizon_01.jpg"); background-position:center; }
     .portfolio-copy { width:100%; padding:30px 26px 26px; }
     .portfolio-copy small { display:block; color:#e6d2a4; font-weight:900; letter-spacing:.12em; margin-bottom:7px; }
     .portfolio-copy h3 { margin:0; font-family:Georgia,"Noto Serif KR",serif; font-size:27px; font-weight:500; }
@@ -257,11 +257,55 @@
       transform: none !important;
     }
 
+  
+
+    /* September 2026 dark renewal */
+    :root {
+      --bg:#090b0a; --paper:#121514; --deep:#ece8e1; --deep2:#050606;
+      --olive:#59665e; --gold:#a43a4c; --muted:#a9aaa5; --line:#2d3330;
+    }
+    body { background:var(--bg); color:var(--deep); }
+    .sparkles span { background:rgba(180,195,220,.38); box-shadow:0 0 18px rgba(106,132,183,.45); }
+    header:before {
+      background:linear-gradient(90deg,rgba(2,4,4,.88) 0%,rgba(5,8,9,.56) 48%,rgba(2,3,3,.42) 100%),
+                 url("images/renewal/hero_main.jpg") center 50%/cover no-repeat;
+    }
+    header:after { background:radial-gradient(circle at 72% 30%,rgba(74,103,158,.18),transparent 28%),radial-gradient(circle at 28% 68%,rgba(125,28,46,.12),transparent 26%); }
+    .eyebrow { color:#b5c2df; }
+    .hero p { color:#ddd9d2; }
+    .primary { background:#f1eee8; color:#111311; }
+    .gold { background:#8e293c; color:#fff; }
+    .lang-switch { background:rgba(5,6,6,.44); border-color:rgba(255,255,255,.25); }
+    .lang-switch a.active { color:#c5cee2; }
+    .lead,.card p,.rules,.equipment-list ul,.faq-item p { color:var(--muted); }
+    .card,.facility-item,.map-card,.faq-item,.notice-box,.calendar-box,.info-table { background:var(--paper); border-color:var(--line); box-shadow:0 16px 40px rgba(0,0,0,.25); }
+    .thumb,.gallery figure { background:#080909; }
+    #concept,#facility,#refund-policy,.calendar-section { background:#0f1311 !important; }
+    #price,#faq,#notice { background:#090b0a !important; }
+    .badge { background:#2a151a; color:#d89aaa; }
+    .notice-box { border-left-color:#8e293c; }
+    .price-card strong,.info-table th,.walk-item span:last-child { color:#c85b70; }
+    .walk-item { background:#151817; border-color:var(--line); }
+    .map-buttons a { background:#242927; color:#e6e2db; }
+    .portfolio-section { background:#060807; }
+    .portfolio-section .lead,.portfolio-copy p { color:#bbbcb7; }
+    .portfolio-card { border-color:#303633; background:#090b0a; }
+    .portfolio-card.black:before { background-image:url("images/renewal/black_main.jpg"); background-position:center; }
+    .portfolio-card.atelier:before { background-image:url("images/renewal/atelier_main.jpg"); background-position:center; }
+    .portfolio-card.horizon:before { background-image:url("images/portfolio/horizon_01.jpg"); background-position:center; }
+    .portfolio-copy small { color:#c9d2e6; }
+    .reservation { background:radial-gradient(circle at 18% 22%,rgba(133,35,55,.20),transparent 30%),radial-gradient(circle at 80% 22%,rgba(59,80,128,.18),transparent 28%),linear-gradient(135deg,#0a0c0b,#050606); }
+    .reservation p,.reservation .lead { color:#c9c6c0; }
+    .qr-card { background:#f2efe9; color:#181a18; }
+    footer { background:#040505; color:#9c9d99; }
+    .image-card { border-color:#2e3431; background:#080909; box-shadow:0 18px 50px rgba(0,0,0,.32); }
+    .intro-photo img { background:#080909; }
+
   </style>
 <meta content="소네트 스튜디오 | 킨텍스 앞 코스프레 렌탈 스튜디오" property="og:title"/>
-<meta content="나뭇잎 사이에서 이야기를 빚다. 행사 전후, 가장 가까운 판타지 컨셉 스튜디오." property="og:description"/>
+<meta content="THE STUDIO TURNS DARK. 블랙존과 검은 마녀의 공방으로 리뉴얼된 소네트 스튜디오." property="og:description"/>
 <meta content="website" property="og:type"/>
-<meta content="images/hero_main.jpg" property="og:image"/>
+<meta content="images/renewal/hero_main.jpg" property="og:image"/>
 <meta content="summary_large_image" name="twitter:card"/>
 </head>
 <body>
@@ -280,9 +324,9 @@
 </div>
 </nav>
 <div class="hero">
-<div class="eyebrow">FOREST ATELIER COSPLAY STUDIO</div>
-<h1>나뭇잎 사이에서<br/>이야기를 빚다</h1>
-<p>행사 전후, 가장 가까운 판타지 컨셉 스튜디오. 킨텍스 도보 5분 거리에 있는 작은 숲속 공방입니다.</p>
+<div class="eyebrow">THE STUDIO TURNS DARK</div>
+<h1>Black Zone ×<br/>Dark Witch's Atelier</h1>
+<p>행사 전후, 가장 가까운 다크 판타지 컨셉 스튜디오. 킨텍스 도보 5분 거리에 있는 소네트 스튜디오의 리뉴얼 공간을 만나보세요.</p>
 <div class="buttons">
 <a class="btn primary" href="#schedule">예약 현황 확인하기</a>
 <a class="btn ghost" href="#reservation">카카오톡 예약</a>
@@ -293,21 +337,21 @@
 <section>
 <div class="wrap feature">
 <div>
-<h2 class="section-title">잘 관리된 오래된 공방처럼</h2>
-<p class="lead">소네트 스튜디오는 낡은 폐허가 아니라, 마법사가 잠시 자리를 비운 듯한 따뜻한 숲속 공방을 지향합니다. 숲속 공방 컨셉존, 미니 소다존, 화이트 호리존, 분장실과 탈의공간까지 하나의 예약으로 이용하실 수 있습니다.</p>
+<h2 class="section-title">빛과 그림자가 교차하는 두 개의 다크 판타지 존</h2>
+<p class="lead">검은 꽃과 흰 드레이프가 겹쳐진 블랙존, 푸른 밤숲의 원형창과 이끼·고서·해골·촛불로 구성된 검은 마녀의 공방, 화이트 호리존과 분장실·탈의공간까지 하나의 예약으로 모두 이용하실 수 있습니다.</p>
 </div>
 <div class="image-card intro-photo no-crop-photo">
-<img alt="소네트 스튜디오 공방 디테일" src="images/photo_02.jpg"/>
+<img alt="검은 마녀의 공방 디테일" src="images/renewal/atelier_detail_01.jpg"/>
 </div>
 </div>
 </section>
-<section id="concept" style="background:#ede5d5">
+<section id="concept" style="background:#121513">
 <div class="wrap">
 <h2 class="section-title">Concept Rooms</h2>
 <p class="lead">다른 무드의 촬영을 한 공간에서 이어갈 수 있습니다.</p>
 <div class="grid">
-<div class="card"><div class="thumb"><img alt="숲속 공방 컨셉존" src="images/photo_01.jpg"/></div><h3>Forest Atelier</h3><p>원형 창, 책장, 나무 오브제, 이끼와 덩굴로 구성된 메인 컨셉존.</p></div>
-<div class="card"><div class="thumb"><img alt="미니 소다존 전체컷" src="images/photo_03.jpg"/></div><h3>Mini Soda Zone</h3><p>소다스튜디오와 협업하여 제작된 미니 소다존. 꽃과 커튼, 은은한 핑크톤으로 구성된 감성 컨셉 공간.</p></div>
+<div class="card"><div class="thumb"><img alt="블랙존 전체컷" src="images/renewal/black_main.jpg"/></div><h3>Black Zone</h3><p>검은 꽃과 흰 드레이프, 고딕 오브제로 구성된 대비감 강한 리뉴얼 컨셉 공간.</p></div>
+<div class="card"><div class="thumb"><img alt="검은 마녀의 공방 전체컷" src="images/renewal/atelier_main.jpg"/></div><h3>Dark Witch's Atelier</h3><p>푸른 밤숲이 비치는 원형창, 이끼와 고서, 해골과 촛불이 어우러진 검은 마녀의 작업실.</p></div>
 <div class="card"><div class="thumb"><img alt="화이트 호리존" src="images/photo_04.jpg"/></div><h3>White Horizon</h3><p>전신컷, 프로필, 굿즈용 사진 촬영에 적합한 깔끔한 호리존.</p></div>
 </div>
 </div>
@@ -317,26 +361,26 @@
 <h2 class="section-title">Gallery</h2>
 <p class="lead">공간의 전체 무드와 디테일 컷을 함께 확인해 주세요.</p>
 <div class="gallery">
-<figure class="wide"><img alt="숲속 공방 전체" src="images/photo_01.jpg"/><figcaption>Forest Atelier</figcaption></figure>
-<figure><img alt="랜턴 디테일" src="images/photo_05.jpg"/><figcaption>Warm Light</figcaption></figure>
-<figure><img alt="책장 디테일" src="images/photo_06.jpg"/><figcaption>Old Books</figcaption></figure>
-<figure class="wide"><img alt="미니 소다존 전체컷" src="images/photo_03.jpg"/><figcaption>Mini Soda Zone</figcaption></figure>
-<figure><img alt="미니 소다존 거울 디테일" src="images/photo_07.jpg"/><figcaption>Soda Detail</figcaption></figure>
-<figure class="tall"><img alt="미니 소다존 화병 디테일" src="images/photo_08.jpg"/><figcaption>Pink Flowers</figcaption></figure>
+<figure class="wide"><img alt="블랙존 전체컷" src="images/renewal/black_main.jpg"/><figcaption>Black Zone</figcaption></figure>
+<figure><img alt="블랙존 디테일 - 고딕 창" src="images/renewal/black_detail_01.jpg"/><figcaption>Gothic Detail</figcaption></figure>
+<figure class="tall"><img alt="블랙존 디테일 - 검은 꽃" src="images/renewal/black_detail_02.jpg"/><figcaption>Black Flowers</figcaption></figure>
+<figure class="wide"><img alt="검은 마녀의 공방 전체" src="images/renewal/atelier_main.jpg"/><figcaption>Dark Witch's Atelier</figcaption></figure>
+<figure><img alt="검은 마녀의 공방 디테일 - 촛불과 해골" src="images/renewal/atelier_detail_01.jpg"/><figcaption>Candle & Skull</figcaption></figure>
+<figure><img alt="검은 마녀의 공방 디테일 - 해골" src="images/renewal/atelier_detail_02.jpg"/><figcaption>Witch's Skeleton</figcaption></figure>
+<figure class="tall"><img alt="검은 마녀의 공방 디테일 - 원형창" src="images/renewal/atelier_detail_03.jpg"/><figcaption>Moonlit Window</figcaption></figure>
 <figure class="wide"><img alt="화이트 호리존" src="images/photo_04.jpg"/><figcaption>White Horizon</figcaption></figure>
-<figure><img alt="분장실" src="images/photo_09.jpg"/><figcaption>Dressing Room</figcaption></figure>
 </div>
 </div>
 </section><section class="portfolio-section" id="portfolio">
 <div class="wrap">
-<h2 class="section-title">공간별 촬영 예시</h2>
-<p class="lead">각 공간에서 실제로 촬영한 모델 사진을 통해 조명과 의상에 따라 달라지는 분위기를 확인해 보세요.</p>
+<h2 class="section-title">Space Gallery</h2>
+<p class="lead">리뉴얼된 공간의 전체컷과 디테일컷을 통해 촬영 무드를 확인해 보세요.</p>
 <div class="portfolio-grid">
-<a aria-label="미니소다존 촬영 예시 보기" class="portfolio-card soda" href="gallery.html#soda">
-<div class="portfolio-copy"><small>MINI SODA ZONE</small><h3>미니소다존</h3><p>화사한 핑크톤부터 드라마틱한 컬러 조명까지.</p><span class="portfolio-link">촬영본 보기</span></div>
+<a aria-label="블랙존 공간컷 보기" class="portfolio-card black" href="gallery.html#black">
+<div class="portfolio-copy"><small>BLACK ZONE</small><h3>블랙존</h3><p>검은 꽃과 흰 드레이프가 만드는 고딕한 대비.</p><span class="portfolio-link">공간컷 보기</span></div>
 </a>
-<a aria-label="마법사의 공방존 촬영 예시 보기" class="portfolio-card atelier" href="gallery.html#atelier">
-<div class="portfolio-copy"><small>MAGIC ATELIER</small><h3>마법사의 공방존</h3><p>원형창과 책상, 오래된 책이 만드는 판타지 무드.</p><span class="portfolio-link">촬영본 보기</span></div>
+<a aria-label="검은 마녀의 공방 공간컷 보기" class="portfolio-card atelier" href="gallery.html#atelier">
+<div class="portfolio-copy"><small>DARK WITCH'S ATELIER</small><h3>검은 마녀의 공방</h3><p>푸른 원형창과 고서, 이끼, 촛불이 만드는 다크 판타지 무드.</p><span class="portfolio-link">공간컷 보기</span></div>
 </a>
 <a aria-label="호리존 촬영 예시 보기" class="portfolio-card horizon" href="gallery.html#horizon">
 <div class="portfolio-copy"><small>WHITE HORIZON</small><h3>호리존</h3><p>전신과 프로필, 단체 촬영까지 자유로운 흰 배경.</p><span class="portfolio-link">촬영본 보기</span></div>
@@ -398,8 +442,8 @@
 <h2 class="section-title">Facility</h2>
 <p class="lead">촬영에 필요한 기본 시설을 준비해두었습니다.</p>
 <div class="facility-grid">
-<div class="facility-item">🌳 숲속 공방 컨셉존</div>
-<div class="facility-item">🌸 미니 소다존</div>
+<div class="facility-item">🖤 블랙존</div>
+<div class="facility-item">🌙 검은 마녀의 공방</div>
 <div class="facility-item">🤍 화이트 호리존</div>
 <div class="facility-item">💄 분장실</div>
 <div class="facility-item">🚪 탈의 공간</div>
@@ -423,7 +467,7 @@
 <ul>
 <li>Aputure Amaran 150c × 1</li>
 <li>Godox LE300Bi × 1</li>
-<li>팔각 소프트박스 × 2</li>
+<li>팔각 소프트박스 × 1</li>
 <li>사각 소프트박스 × 1</li>
 <li>옵티컬 스누트 × 1</li>
 </ul>
